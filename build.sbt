@@ -10,7 +10,8 @@ lazy val root = (project in file("."))
     name := "telegramGifBot",
     libraryDependencies += scalaTest % Test,
     libraryDependencies += "com.bot4s" %% "telegram-core" % "4.4.0-RC2",
-    libraryDependencies += "io.github.cdimascio" % "java-dotenv" % "5.1.3"
+    libraryDependencies += "io.github.cdimascio" % "java-dotenv" % "5.1.3",
+    libraryDependencies += "net.ruippeixotog" %% "scala-scraper" % "2.2.0"
   )
 
 // See https://www.scala-sbt.org/1.x/docs/Using-Sonatype.html for instructions on how to publish to Sonatype.
