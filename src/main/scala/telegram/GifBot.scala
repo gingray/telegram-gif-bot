@@ -26,8 +26,9 @@ class GifBot(val token: String, val gifPath: String) extends TelegramBot with Po
 
 
   def handleMessage(message: Message) = {
-    val parser = new HtmlParser("")
-    parser.call("")
+    val parser = new GiphyDownloader("")
+
+    parser.call
     val byteArray = Files.readAllBytes(Paths.get(gifPath))
     val inputFile = InputFile.apply("my.gif", byteArray)
     request(SendAnimation(message.chat.id, inputFile)).void

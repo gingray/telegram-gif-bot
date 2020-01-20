@@ -2,12 +2,12 @@ package telegram
 
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration
+import io.github.cdimascio.dotenv.Dotenv
 
 
 object TelegramGifBot extends Greeting with App {
   println(greeting)
 
-  import io.github.cdimascio.dotenv.Dotenv
 
   val dotenv = Dotenv.load
   val bot = new GifBot(dotenv.get("TELEGRAM_KEY"), dotenv.get("FILE_PATH_GIF"))

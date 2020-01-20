@@ -1,4 +1,4 @@
-package example
+package telegram
 
 import org.scalatest._
 import telegram.TelegramGifBot
